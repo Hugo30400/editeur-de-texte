@@ -10,14 +10,10 @@ public class CommandeRemplacer extends CommandeDocument {
 
     @Override
     public void executer() {
+        if(parametersCheck(3, "Format attendu : remplacer;Debut;Fin;remplacement")) return;
         int longueurDeParametre = parameters.length;
 
-        if(longueurDeParametre < 3) {
-            System.err.println("Format attendu : remplacer;Debut;Fin;remplacement");
-            return;
-        }
-        int debut;
-        int fin;
+        int debut, fin;
 
         try {
             debut = Integer.parseInt(parameters[1]);

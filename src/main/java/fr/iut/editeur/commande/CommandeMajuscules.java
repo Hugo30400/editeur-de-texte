@@ -10,10 +10,7 @@ public class CommandeMajuscules extends CommandeDocument {
 
     @Override
     public void executer() {
-        if(parameters.length < 3) {
-            System.err.println("Format attendu : majuscules;Debut;Fin");
-            return;
-        }
+        if(parametersCheck(3, "Format attendu : majuscules;Debut;Fin")) return;
 
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);

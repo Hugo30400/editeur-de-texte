@@ -17,4 +17,12 @@ public abstract class CommandeDocument implements Commande {
     public void executer() {
         System.out.println(this.document);
     }
+
+    public boolean parametersCheck(int nbParameters, String errMessage) {
+        if (parameters.length < nbParameters) {
+            System.err.println(errMessage);
+            return true;
+        }
+        return false;
+    }
 }
