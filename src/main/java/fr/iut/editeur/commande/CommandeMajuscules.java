@@ -13,10 +13,7 @@ public class CommandeMajuscules extends CommandeDocument {
         if(parametersCheck(3, "Format attendu : majuscules;Debut;Fin")) return;
         if(parametersNumbersCheck(parameters[1], parameters[2])) return;
 
-        int debut = Integer.parseInt(parameters[1]);
-        int fin = Integer.parseInt(parameters[2]);
-
-        this.document.majuscules(debut, fin);
+        this.document.majuscules(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]));
         super.executer();
     }
 }
