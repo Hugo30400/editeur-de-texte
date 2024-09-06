@@ -11,6 +11,7 @@ public class CommandeMajuscules extends CommandeDocument {
     @Override
     public void executer() {
         if(parametersCheck(3, "Format attendu : majuscules;Debut;Fin")) return;
+        if(parametersNumbersCheck(parameters[1], parameters[2])) return;
 
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);

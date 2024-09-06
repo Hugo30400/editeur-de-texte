@@ -25,4 +25,15 @@ public abstract class CommandeDocument implements Commande {
         }
         return false;
     }
+
+    public boolean parametersNumbersCheck(String... parametersNumber) {
+        try {
+            for (String number : parametersNumber) {
+                int numberInt = Integer.parseInt(number);
+            }
+        } catch (NumberFormatException e) {
+            System.err.println("L'un ou plusieurs des paramètres qui doivent être des chiffres ne le sont pas"); return true;
+        }
+        return false;
+    }
 }
