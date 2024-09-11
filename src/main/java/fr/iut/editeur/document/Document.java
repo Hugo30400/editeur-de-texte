@@ -1,7 +1,13 @@
 package fr.iut.editeur.document;
 
+/**
+ * Cette classe sert à créer un objet Document contenant du texte
+ */
 public class Document {
 
+    /**
+     *  Variable qui contient le texte d'un Document
+     */
     private String texte;
 
     public Document() {
